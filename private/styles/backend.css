@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+   	padding: 0;
+   	border: none;
+}
+body {
+   font: Arial, Helvetica, sans-serif;
+   background-color:#0E1C27;
+   color: #FFF;
+}
+
+select {
+	width: 320px;
+}
+
+.bodyDiv {
+	width: 1200px;
+	margin-left: 15px;
+}
+
+.error {
+	color: red;
+	padding-bottom: 15px;
+}
+
+.top_menu {
+	background:#EFEBDB url(./images/header.jpg) left top no-repeat;
+	height:100px;
+	margin-top:30px;
+	width: 1000px;
+}
+
+
+.top_menu h2 {
+	color:#FFF;
+	padding: 30px;
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+
+.top_menu div {
+	float: left;
+	width: 1000px;
+	margin-top: 110px;
+}
+
+.top_menu ul {
+	list-style: none;
+}
+
+.top_menu li {
+	display: inline;
+}
+
+.top_menu li a {
+	font-size:1.3em;
+	margin-left: 10px;
+	color: #FFF;
+}
+
+.top_menu span {
+	float: right;
+}
+
+.top_menu span a {
+	color: red;
+}
+
+.top_menu .ul2 {
+	margin-top: 10px;
+}
+
+.main_title {
+	float: left;
+	width: 100%;
+	margin-top: 15px;	
+}
+
+.main_title h1 {
+	border-top: 2px #666 solid;
+	color:#666;
+	font-size:2.3em;
+}
+
+.left_menu {
+	float: left;
+	width: 350px;
+	padding-top:25px;
+	padding-left:15px;
+}
+
+.main {
+	padding-top:25px;
+	width: 700px;
+	float: left;
+}
+
+.main form {
+	margin: 0 auto;
+}
+
+.main div {
+	padding-bottom: 10px;
+	width:100%;
+}
+
+.main label {
+	float:left;
+	width: 120px;
+	padding-bottom: 10px;
+}
+
+.main input {
+	width: 250px;
+	border:1px #ccc solid;
+}
+
+.main input[type=checkbox] {
+	width: 20px;
+}
+
+.main select {
+	width: 250px;
+}
+
+.main a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.main .title_form {
+	margin-bottom: 15px;
+	color: #CCC;
+}
+
+.main .operations {
+	margin-top: 20px;
+    text-align: right;
+    width: 500px;	
+}
+
+.main table td {
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.main table th {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.operations a {
+	text-decoration: none;
+	color: #CCCCCC;
+	margin-left: 30px;
+	font-size:1.2em;
+}
+
+#imagesDiv {
+	margin-left: 120px;
+	margin-top: 20px;
+}
+
+#imagesDiv .imageDiv {
+	height: 80px;
+	border-bottom: 1px solid;
+	margin-top: 20px;
+}
+
+#imagesDiv label {
+	float: none;
+}
+
+#imagesDiv img {
+	float: left;
+	margin-right: 20px;
+	max-height: 70px;
+	max-width: 70px;
+}
+
+#imagesDiv input {
+	width: 30px;
+}
+
+#imagesDiv input.imgText{
+	width: 350px;
+}
+
+#templateImage {
+	display: none;
+}

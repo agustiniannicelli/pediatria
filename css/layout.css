@@ -1,0 +1,169 @@
+body {
+   font: Arial, Helvetica, sans-serif;
+   background-color:#00A19A;
+   background-image: url(../images/body.png);
+   background-position: 0px 49px;
+   background-repeat: repeat-x;
+   margin-top: 58px;
+   padding-right: 15px;
+   padding-left: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav div.dr {
+	float: right;
+    color: white;
+    font-size: large;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+div.navbar-header img.logo{
+	margin-top: 9px;
+}
+
+nav form {
+	float: left;
+	padding-top: 10px;
+}
+
+nav form input {
+	width: 250px;
+}
+
+nav form button {
+	margin-left: -5px;
+}
+
+ul.navbar-nav {
+	float: right;
+}
+
+ul.navbar-nav li a {
+	padding-bottom: 0px;
+}
+
+ul.navbar-nav li.social i.fa-facebook-square {
+    color: #3b5998;
+    font-size: 1.7em;
+}
+
+ul.navbar-nav li a {
+	font-size: 1.2em;
+	color: white;
+}
+
+ul.navbar-nav li a:HOVER {
+	font-size: 1.3em;
+}
+
+div.dr {
+	color: white;
+	font-weight: 600;
+	font-size: 1.1em;
+}
+
+div.photo-bar {
+	background-color: white;
+	height: 200px;
+	margin-top: 12px;
+	margin-bottom: 20px;
+}
+
+div#main-side-bar .list-group-submenu {
+    margin-left: 10px;
+}
+
+div#main-side-bar a.list-group-item {
+	font-size: 0.9em;
+}
+
+div.footer {
+	background-color: #C8FE2E;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+div.side-bar {
+	margin-top: 10px;
+}
+
+div.side-bar div.goethe {
+	color: white;
+}
+
+div.side-bar div.goethe span {
+	font-style: italic;
+}
+
+div.notes-grid div.row {
+	margin-top: 10px; 
+}
+
+div.note {
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+div.note img {
+	max-width: 100%;
+}
+
+div.item {
+	background-color: white;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.item h5 {
+    color: #444;
+    font-size: 1.2em;
+}
+
+
+div.item p {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #555;
+}
+
+span.item-date {
+	float: right;
+	font-family: cursive;
+	color: #555;	
+}
+
+span.item-category {
+	font-family: cursive;
+	color: #555;
+	font-size: 1.2em;
+}
+
+div.item-img img{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+div.profile {
+	padding-top: 10px;
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+div.profile div.photo {
+	margin-bottom: 20px;
+}
+
+div.profile p {
+	font-style: italic;
+	font-size: 1.2em;
+	color: #555;
+}

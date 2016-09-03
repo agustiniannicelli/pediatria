@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<style type="text/css">
+		@import url(styles/backend.css);
+	</style>
+	
+	<!--[if IE]>
+		<style type="text/css">
+			@import url(styles/IEbugs.css);
+		</style>
+	<![endif]-->
+	
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+	<body>
+		<div class="bodyDiv">
+			<div class="top_menu"></div>
+			<div class="main_title"><h1>Ingreso</h1></div>
+			<div class="left_menu"></div>
+			<div class="main">
+				<form id="form" action="../security/login.php" method="post">
+					<fieldset>
+						<input type="hidden" name="url" value="/front/private/menu.php" />
+						<div><label>Usuario:</label> <input name="usuario" type="text" size="15" maxlength="10" /></div>
+						<div><label>Password:</label> <input name="password" type="password" size="15" maxlength="10" /></div>
+						<div><label><a href="javascript:$('#form').submit();">enviar</a></label></div>
+					</fieldset>
+				</form>	
+			</div><!-- contenido -->
+		</div>
+	</body>
+</html>
+	
