@@ -19,7 +19,7 @@ if(isset($_POST["action"]))
 	$className = $action[0];
 	$methodName = $action[1];
 
-	$method = new ReflectionMethod($className, $methodName); 
+	$method = new ReflectionMethod($className, $methodName);
 	
 	try
 	{

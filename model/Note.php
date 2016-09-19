@@ -213,8 +213,6 @@ class Note
 	    		Image::update($imageId, $_POST["Image_position"][$i], $_POST["Image_text"][$i]);
 	    	}
 		}
-	    	
-		
 		
 		Image::delete();
 		$_SESSION["idNote"] = $id;
@@ -230,6 +228,14 @@ class Note
 		ConnectionManager::executeUpdate($query);
 
 		
+		return true;
+	}
+	
+	public static function addView()
+	{	
+		$query = self::UPDATE_SQL;
+		$query .= " views = views + 1 WHERE id = $_POST[Note_id]";
+		ConnectionManager::executeUpdate($query);
 		return true;
 	}
 	

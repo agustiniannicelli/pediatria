@@ -18,5 +18,5 @@ foreach ($categories as $category)
 	$notes[$category->id] = Note::getAllByCategory($category);
 }
 
-Printer::execute(array("notes" => $notes, "categories" => $categories, "active" =>"index", "idCategory" => 1, "path" => ConfigFile::$FILES_PATH), "index.tpl");
+Printer::execute(array("notes" => $notes, "categories" => $categories, "active" =>"index", "idCategory" => 0, "path" => ConfigFile::$FILES_PATH), "index.tpl");
 ?>
