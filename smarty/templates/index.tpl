@@ -35,100 +35,60 @@
 		<div class="col-md-3 side-bar">
 			{include file="side_bar.tpl"}
 		</div>
-		<div class="col-md-9 notes-grid">
-			<div class="row">
-				<div class="col-md-5 item">
-					{assign var="note" value=$notes[1][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
-						</div>
-					</a>
-				</div>
-				<div class="col-md-5 col-md-offset-1 item">					
-					{assign var="note" value=$notes[2][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
-						</div>
-					</a>
+		<div class="col-md-7 notes-grid">
+			<div class="row lasts">
+				<div class="col-md-12">
+					<span>&Uacute;ltimas publicaciones</span>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-5 item">
-					{assign var="note" value=$notes[3][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
+			{foreach name=notes from=$notes item=noteArr}
+				{assign var="note" value=$noteArr[0]}
+				{if ($smarty.foreach.notes.iteration - 1) % 2 == 0}
+					<div class="row">
+				{/if}
+			  			<div class="col-md-5 {if ($smarty.foreach.notes.iteration - 1) % 2 == 1} col-md-offset-1 {/if} item">							
+							<div>
+								<span class="item-views">{$note->views} visitas</span>
+								<span class="item-date">Publicada: {$note->date|date_format:"%D"}</span>
+							</div>
+							<br />
+							<span class="item-category">{$note->category->name}</span>							
+							<a href="note.php?id={$note->id}">
+								<h5>
+									{$note->title}
+								</h5>
+								<p>{$note->subtitle}</p>
+								<div class="item-img">
+									<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
+								</div>
+							</a>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-5 col-md-offset-1 item">					
-					{assign var="note" value=$notes[4][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
+		  		{if ($smarty.foreach.notes.iteration - 1) % 2 != 0 || $smarty.foreach.notes.last}
+					</div>
+				{/if}
+  			{/foreach}
+  		</div>
+  		<div class="col-md-2 side-bar">
+			<span class="top-ten">Las m&aacute;s le&iacute;das</span>
+			{foreach name=topTen from=$topTen item=note}
+				<div class="row">
+		  			<div class="col-md-12 item">							
+						<div>
+							<span class="item-views">{$note->views} visitas</span>
 						</div>
-					</a>
+						<br />						
+						<a href="note.php?id={$note->id}">
+							<h5>
+								{$note->title}
+							</h5>
+							<p>{$note->subtitle}</p>
+						</a>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5 item">
-					{assign var="note" value=$notes[5][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
-						</div>
-					</a>
-				</div>
-				<div class="col-md-5 col-md-offset-1 item">					
-					{assign var="note" value=$notes[6][0]}
-					<span class="item-category">{$note->category->name}</span>
-					<span class="item-date">{$note->date|date_format:"%D"}</span>
-					<a href="note.php?id={$note->id}">
-						<h5>
-							{$note->title}
-						</h5>
-						<p>{$note->subtitle}</p>
-						<div class="item-img">
-							<img src="{$path}{$note->images[0]->path}" alt="{$note->title}" />
-						</div>
-					</a>
-				</div>
-			</div>
+  			{/foreach}	
 		</div>
 	</div>
-	
+		
 	{include file="footer.tpl"}
 </body>
 </html>

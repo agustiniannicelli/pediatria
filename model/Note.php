@@ -19,6 +19,7 @@ class Note
 		$this->text = "";
 		$this->topic = "";
 		$this->published = 0;
+		$this->views = 0;
 		$this->images =  array();
 	}
 	
@@ -33,6 +34,7 @@ class Note
 		$instance->text = $row->text;
 		$instance->topic = $row->topic;
 		$instance->published = $row->published;
+		$instance->views = $row->views;
 		$instance->images = Image::getAllForNote($row->id);
 		return $instance;
 	}
@@ -56,6 +58,22 @@ class Note
 	public static function getAllByCategory($category)
 	{
 		$query = self::SELECT_SQL . " WHERE published = 1 AND id_category = $category->id ORDER BY date DESC ";
+		$resultSet = ConnectionManager::executeSelect($query);
+	
+		$objetcs = array();
+		while ($row = mysqli_fetch_object($resultSet))
+		{
+			$instance = self::load($row);
+			array_push($objetcs, $instance);
+		}
+	
+		$resultSet->close();
+		return $objetcs;
+	}
+	
+	public static function getTopTen()
+	{
+		$query = self::SELECT_SQL . " WHERE published = 1 ORDER BY views DESC LIMIT 10";
 		$resultSet = ConnectionManager::executeSelect($query);
 	
 		$objetcs = array();

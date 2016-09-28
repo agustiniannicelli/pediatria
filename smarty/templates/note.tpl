@@ -40,7 +40,11 @@
 			{include file="side_bar.tpl"}
 		</div>
 		<div class="col-md-8 note">
-			<span class="item-date">{$note->date|date_format:"%D"}</span>
+			<div>
+				<span class="item-views">{$note->views} visitas</span>
+				<span class="item-date">Publicada: {$note->date|date_format:"%D"}</span>
+			</div>
+			<br />
 			<h2>{$note->title}</h2>
 			<div class="intro">
 				<p>{$note->subtitle}</p>

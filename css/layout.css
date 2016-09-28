@@ -101,13 +101,26 @@ div.side-bar div.goethe span {
 	font-style: italic;
 }
 
-div.notes-grid div.row {
-	margin-top: 10px; 
+div.side-bar span.top-ten {
+	font-weight: 600;
+	font-size: 1.2em;
+	color: white;
+}
+
+div.lasts {
+	margin-top: 10px;
+}
+
+div.lasts span{
+	font-weight: 600;
+	font-size: 1.2em;
+	color: white;
 }
 
 div.note {
 	background-color: white;
 	margin-top: 10px;
+	padding-top: 10px;
 	border-radius: 4px;
 }
 
@@ -120,6 +133,7 @@ div.item {
 	border-radius: 4px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-top: 10px;
 }
 
 div.item h5 {
@@ -135,20 +149,28 @@ div.item p {
 }
 
 span.item-date {
+	float: left;
+	font-family: cursive;
+	color: #555;
+	font-size: 0.9em;
+}
+
+span.item-views {
 	float: right;
 	font-family: cursive;
-	color: #555;	
+	color: #555;
+	font-size: 0.9em;
 }
 
 span.item-category {
 	font-family: cursive;
-	color: #555;
+	color: #cc5959;
 	font-size: 1.2em;
 }
 
 div.item-img img{
-	max-width: 200px;
-	max-height: 200px;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 div.profile {

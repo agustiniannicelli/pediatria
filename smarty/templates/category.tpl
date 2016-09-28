@@ -42,8 +42,12 @@
 					<div class="row">
 				{/if}
 			  			<div class="col-md-5 {if ($smarty.foreach.notes.iteration - 1) % 2 == 1} col-md-offset-1 {/if} item">							
-							<span class="item-category">{$note->category->name}</span>
-							<span class="item-date">{$note->date|date_format:"%D"}</span>
+							<div>
+								<span class="item-views">{$note->views} visitas</span>
+								<span class="item-date">Publicada: {$note->date|date_format:"%D"}</span>
+							</div>
+							<br />
+							<span class="item-category">{$note->category->name}</span>							
 							<a href="note.php?id={$note->id}">
 								<h5>
 									{$note->title}
@@ -54,12 +58,10 @@
 								</div>
 							</a>
 						</div>
-		  		{if ($smarty.foreach.notes.iteration - 1) % 2 != 0}
+		  		{if ($smarty.foreach.notes.iteration - 1) % 2 != 0 || $smarty.foreach.notes.last}
 					</div>
 				{/if}
-  			{/foreach}
-		
-			
+  			{/foreach}			
 		</div>
 	</div>
 	
