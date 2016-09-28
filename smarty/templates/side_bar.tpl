@@ -1,3 +1,12 @@
+{literal}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8673470692858907",
+    enable_page_level_ads: true
+  });
+</script>
+{/literal}
 <div id="main-side-bar">
 	<div class="list-group panel">
 		<a href="#notas" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#main-side-bar">
